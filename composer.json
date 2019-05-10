@@ -1,0 +1,10 @@
+{
+  "name": "template",
+  "description": "Website",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "php": ">=7.0.0",
+    "vlucas/phpdotenv": "v2.2.1"
+  }
+}
