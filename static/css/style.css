@@ -47,19 +47,9 @@ html {
 }
 */
 body {
-  position: relative;
-  /* for overlay effect */
   width: auto;
   /* prevent horizontal scrolling on mobile */
-  overflow-x: hidden;
-  /* prevent horizontal scrolling on mobile */ }
-
-ul {
-  padding-left: 40px; }
-
-.container {
-  overflow-x: hidden;
-  /*prevent horizontal scrolling on mobile*/ }
+  font-family: Bebas, 'Bebas Neue', Arial, sans-serif; }
 
 /* used by tinymce WP editor */
 img.centered, .aligncenter, div.aligncenter {
@@ -109,34 +99,200 @@ p + p {
 .text-center {
   text-align: center; }
 
-#header ul {
-  padding: 0;
-  margin: 0; }
-  #header ul > li {
-    height: auto;
+.col-md-6 {
+  float: left; }
+
+#header .top-banner {
+  background-color: #ff6200; }
+  @media (min-width: 1200px) {
+    #header .top-banner .content-div {
+      width: 1024px;
+      margin: auto;
+      text-align: center; } }
+  #header .top-banner .content-div .left-div {
+    float: left; }
+    #header .top-banner .content-div .left-div .label {
+      color: #be3600;
+      font-size: 14.77pt;
+      line-height: 18.65pt;
+      padding: 10px;
+      float: left; }
+      #header .top-banner .content-div .left-div .label span {
+        color: #fff;
+        padding-left: 15px; }
+  #header .top-banner .content-div .right-div {
+    float: right; }
+    #header .top-banner .content-div .right-div .login {
+      float: left;
+      padding: 10px; }
+      #header .top-banner .content-div .right-div .login a {
+        color: #be3600;
+        font-size: 14.62pt;
+        line-height: 18.46pt; }
+    #header .top-banner .content-div .right-div .signup {
+      float: left;
+      padding: 10px; }
+      #header .top-banner .content-div .right-div .signup a {
+        color: #fff;
+        font-size: 14.62pt;
+        line-height: 18.46pt; }
+
+#header .nav {
+  background-color: #f9f9f9; }
+  @media (min-width: 1200px) {
+    #header .nav .content-div {
+      width: 1024px;
+      margin: auto;
+      text-align: center; } }
+  #header .nav .content-div .logo {
+    float: left; }
+    #header .nav .content-div .logo .title {
+      color: #000;
+      font-size: 41.13pt;
+      line-height: 51.91pt;
+      margin: 40px 0;
+      float: left; }
+      #header .nav .content-div .logo .title span {
+        color: #ff6200; }
+  #header .nav .content-div .menu {
+    margin: 0 0 50px 0; }
+    @media (min-width: 768px) {
+      #header .nav .content-div .menu {
+        margin: 50px 0; } }
+    #header .nav .content-div .menu ul {
+      background: white;
+      float: left;
+      transition: 2s; }
+      #header .nav .content-div .menu ul ul {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        visibility: hidden;
+        display: none;
+        opacity: 0; }
+        #header .nav .content-div .menu ul ul ul {
+          left: 100%;
+          top: 0; }
+    #header .nav .content-div .menu > ul > li a {
+      color: #000; }
+    #header .nav .content-div .menu li {
+      float: left;
+      position: relative;
+      width: 150px;
+      list-style: none;
+      transition: 2s; }
+      #header .nav .content-div .menu li:hover {
+        background: #ddd; }
+        #header .nav .content-div .menu li:hover > ul {
+          visibility: visible;
+          opacity: 1;
+          display: block; }
+        #header .nav .content-div .menu li:hover li {
+          background: #ddd; }
+      #header .nav .content-div .menu li li:hover {
+        background: #bbb; }
+        #header .nav .content-div .menu li li:hover li {
+          background: #bbb; }
+      #header .nav .content-div .menu li li li:hover {
+        background: #999; }
+    #header .nav .content-div .menu a {
+      display: block;
+      text-decoration: none;
+      padding: 5px 15px;
+      color: #000; }
+
+@media (min-width: 1200px) {
+  #page-content .content-div {
+    width: 1024px;
+    margin: auto;
+    text-align: left; } }
+
+#page-content .content-div .bread-crumb {
+  margin: 50px 0;
+  color: #929292; }
+  #page-content .content-div .bread-crumb a {
+    color: #929292;
+    font-family: Ubuntu; }
+  #page-content .content-div .bread-crumb .current {
+    font-weight: bold;
+    color: #000; }
+
+#page-content .content-div .contact {
+  color: #878787;
+  font-size: 14pt;
+  line-height: 19pt;
+  padding-bottom: 15px; }
+  #page-content .content-div .contact h1 {
+    font-size: 26.96pt;
+    line-height: 19.54pt;
+    font-weight: bold;
+    color: #ff6200; }
+
+@media (min-width: 1200px) {
+  #page-content .content-div .contact-form {
+    width: 472px;
+    float: left; } }
+
+#page-content .content-div .contact-form h2 {
+  color: #ff6200;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 23pt;
+  line-height: 24.65pt;
+  border-bottom: 4px solid #585858; }
+
+#page-content .content-div .contact-form input {
+  color: #878787;
+  font-size: 14pt;
+  line-height: 24.65pt;
+  background-color: #f6f6f6;
+  border: 1px solid #ededed;
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%; }
+
+#page-content .content-div .contact-form .contact-phone-field {
+  width: calc( 50% - 7px); }
+
+#page-content .content-div .contact-form .contact-email-field {
+  width: calc( 50% - 7px);
+  float: right; }
+  @media (min-width: 768px) {
+    #page-content .content-div .contact-form .contact-email-field {
+      margin-left: 10px; } }
+
+#page-content .content-div .contact-form .contact-message-field {
+  height: 105px; }
+
+#page-content .content-div .contact-form .contact-submit {
+  width: auto;
+  margin-top: 15px;
+  color: #fff;
+  background-color: #ff6200;
+  padding: 5px 35px; }
+
+#page-content .content-div .reach-us {
+  color: #595959;
+  font-size: 16pt; }
+  @media (min-width: 1200px) {
+    #page-content .content-div .reach-us {
+      width: 472px;
+      float: right; } }
+  #page-content .content-div .reach-us h2 {
+    color: #ff6200;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 23pt;
+    line-height: 24.65pt;
+    border-bottom: 4px solid #585858; }
+
+#page-content .content-div .socials {
+  margin-top: 30px;
+  padding-bottom: 50px; }
+  @media (min-width: 768px) {
+    #page-content .content-div .socials {
+      margin-top: 60px;
+      padding-bottom: 100px; } }
+  #page-content .content-div .socials img {
     float: left;
-    text-align: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    padding: 0; }
-    #header ul > li:hover ul {
-      display: block; }
-    #header ul > li ul {
-      display: none;
-      height: auto;
-      margin: -15px;
-      margin-top: -20px;
-      padding: 0;
-      position: absolute; }
-      #header ul > li ul li {
-        list-style: none;
-        text-align: left;
-        position: relative; }
-        #header ul > li ul li a {
-          color: #000; }
-          #header ul > li ul li a:hover {
-            color: #000; }
+    margin-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */

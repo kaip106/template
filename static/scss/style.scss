@@ -48,15 +48,9 @@ html {
 }
 */
 body {
-  position: relative; /* for overlay effect */
   width: auto; /* prevent horizontal scrolling on mobile */
-  overflow-x: hidden; /* prevent horizontal scrolling on mobile */
-}
-ul {
-  padding-left: 40px;
-}
-.container {
-  overflow-x: hidden; /*prevent horizontal scrolling on mobile*/
+  font-family: Bebas, 'Bebas Neue', Arial, sans-serif;
+
 }
 /* used by tinymce WP editor */
 img.centered, .aligncenter, div.aligncenter {
@@ -106,43 +100,245 @@ p + p {
 .text-center {
   text-align: center;
 }
+.col-md-6{float:left;}
 #header{
-  ul{
-    padding: 0;
-    margin: 0;
-    > li{
-      height: auto;
-      float: left;
-      text-align: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      position: relative;
-      padding: 0;
-      &:hover ul{
-        display: block;
+    .top-banner{
+      background-color:#ff6200;
+      .content-div{
+        @media(min-width: 1200px){
+          width:1024px;
+          margin:auto;
+          text-align: center;
+        }
+
+      .left-div{
+        float:left;
+        .label{
+          color:#be3600;
+          font-size:14.77pt;
+          line-height:18.65pt;
+          padding:10px;
+          float: left;
+          span{
+            color:#fff;
+            padding-left:15px;
+          }
+        }
       }
-      ul{
-        display: none;
-        height: auto;
-        margin: -15px;
-        margin-top: -20px;
-        padding: 0;
-        position: absolute;
-        li{
-          list-style: none;
-          text-align: left;
-          position: relative;
+      .right-div {
+        float:right;
+        .login{
+          float: left;
+          padding: 10px;
           a{
-            color:#000;
-            &:hover{
-              color:#000;
-            }
+            color: #be3600;
+            font-size: 14.62pt;
+            line-height: 18.46pt;
+          }
+        }
+        .signup {
+          float: left;
+          padding: 10px;
+          a{
+            color: #fff;
+            font-size: 14.62pt;
+            line-height: 18.46pt;
           }
         }
       }
     }
   }
+  .nav{
+    background-color:#f9f9f9;
+    .content-div {
+      @media(min-width: 1200px) {
+        width: 1024px;
+        margin: auto;
+        text-align: center;
+      }
+      .logo {
+        float: left;
+        .title {
+          color: #000;
+          font-size: 41.13pt;
+          line-height: 51.91pt;
+          margin: 40px 0;
+          float: left;
+          span {
+            color: #ff6200;
+          }
+        }
+      }
+      .menu {
+        margin: 0 0 50px 0;
+        @media(min-width: 768px){
+          margin: 50px 0;
+        }
+        ul{
+          background: white;
+          float: left;
+          z-index: 9;
+          transition: .5s;
+          ul{
+            position: absolute;
+            left: 0;
+            top: 100%;
+            visibility: hidden;
+            display: none;
+            opacity: 0;
+            ul{
+              left: 100%;
+              top: 0;
+            }
+          }
+        }
+        > ul{
+          > li{
+            a {
+              color: #000;
+            }
+          }
+        }
+        li{
+          float: left;
+          position: relative;
+          width: 150px;
+          list-style: none;
+          transition: .5s;
+          &:hover{
+            background: #ddd;
+            > ul{
+              visibility: visible;
+              opacity: 1;
+              display: block;
+            }
+            li{
+              background: #ddd;
+            }
+          }
+          li{
+            &:hover{
+              background: #bbb;
+              li{
+                background: #bbb;
+              }
+            }
+            li{
+              &:hover{
+                background: #999;
+              }
+            }
+          }
+        }
+        a {
+          display: block;
+          text-decoration: none;
+          padding: 5px 15px;
+          color: #000;
+        }
+      }
+    }
+  }
+
 }
-#template{}
-#footer{}
+#page-content{
+  .content-div{
+    @media(min-width: 1200px){
+      width:1024px;
+      margin: auto;
+      text-align: left;
+    }
+    .bread-crumb{
+      margin: 50px 0;
+      color: #929292;
+      a {
+        color: #929292;
+        font-family: Ubuntu;
+      }
+      .current{
+        font-weight: bold;
+        color:#000;
+      }
+    }
+    .contact{
+      color:#878787;
+      font-size:14pt;
+      line-height:19pt;
+      padding-bottom:15px;
+      h1{
+        font-size:26.96pt;
+        line-height:19.54pt;
+        font-weight: bold;
+        color:#ff6200;
+
+      }
+    }
+    .contact-form{
+      @media(min-width: 1200px){
+        width:472px;
+        float:left;
+      }
+      h2{
+        color:#ff6200;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 23pt;
+        line-height:24.65pt;
+        border-bottom:4px solid #585858;
+      }
+      input{
+        color:#878787;
+        font-size:14pt;
+        line-height:24.65pt;
+        background-color: #f6f6f6;
+        border:1px solid #ededed;
+        margin: 5px 0;
+        padding: 10px;
+        width:100%;
+      }
+      .contact-phone-field{
+        width:calc( 50% - 7px);
+      }
+      .contact-email-field{
+        width:calc( 50% - 7px);
+        float: right;
+        @media(min-width: 768px) {
+          margin-left: 10px;
+        }
+      }
+      .contact-message-field{
+        height:105px;
+      }
+      .contact-submit{
+        width:auto;
+        margin-top: 15px;
+        color:#fff;
+        background-color:#ff6200;
+        padding:5px 35px;
+      }
+    }
+    .reach-us{
+      @media(min-width: 1200px){
+        width:472px;
+        float:right;
+      }
+      h2{
+        color:#ff6200;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 23pt;
+        line-height:24.65pt;
+        border-bottom:4px solid #585858;
+      }
+      color:#595959;
+      font-size:16pt;
+    }
+    .socials{
+      margin-top:30px;
+      padding-bottom: 50px;
+      @media(min-width: 768px){
+        margin-top:60px;
+        padding-bottom: 100px;
+      }
+      img{float:left;margin-right:5px;}
+    }
+  }
+}
